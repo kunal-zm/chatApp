@@ -164,7 +164,7 @@
             }
             .userChats{
 
-                .userd{
+                .userChat{
                     display: flex;
                     align-items: center;
                     gap: 10px;
@@ -179,7 +179,7 @@
                         border-radius: 50%;
                         object-fit: cover;
                     }
-                    .data{
+                    .userChatInfo{
                         span{
                             font-size: 20px;
                             color:white;
@@ -220,6 +220,54 @@
                 background-color: grey;
                 padding: 10px;
                 height: calc(100% - 160px);
+                overflow-y: scroll;
+                .message{
+                    display: flex;
+                    gap: 10px;
+                    .messageInfo{
+                        display: flex;
+                        flex-direction: column;
+                        
+                        img{
+                            border-radius: 50%;
+                            height:40px;
+                            width: 40px;
+                            object-fit: cover;
+                        }
+                        span{
+                            padding: 10px;
+                        }
+                    }
+                    .messgeContent{
+                        display: flex;
+                        max-width: 80%;
+                        flex-direction: column;
+                        gap:10px;
+
+                        p{
+                            background-color: white;
+                            padding: 10px 20px;
+                            max-width: max-content;
+                            border-radius: 0px 10px 10px 10px;
+                        }
+                        img{
+                            width: 50%;
+                        }
+                        
+                    }
+                    &.owner{
+                        flex-direction: row-reverse;
+                        .messgeContent{
+                            align-items: flex-end;
+                            p{
+                                background-color: beige;
+                                color:black;
+                                border-radius: 10px 0px 10px 10px;
+                            }
+                        }
+                        
+                    }
+                }
             }
 
             .input{
